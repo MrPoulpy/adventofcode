@@ -34,7 +34,7 @@ var Solve = function(wires) {
 		if(wire in wires) {
 			return;
 		}
-		wires[ wire ] = v & 0xFFFF;
+		wires[wire] = v & 0xFFFF;
 	};
 	
 	for( var i = 0; i < input.length; i++ ) {
