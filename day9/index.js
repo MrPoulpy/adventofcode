@@ -1,6 +1,6 @@
 var fs = require('fs');
 var _ = require('lodash');
-var cmb = require('js-combinatorics');
+var combi = require('js-combinatorics');
 var input = fs.readFileSync('input.txt').toString().split('\n');
 
 var cities = [];
@@ -11,7 +11,7 @@ input.forEach(function(v){
 	listCities(regex[1],regex[2],regex[3]);
 });
 
-var paths = cmb.permutation(Object.keys(cities)).toArray();
+var paths = combi.permutation(Object.keys(cities)).toArray();
 
 paths.forEach(function(v){
 	var dist = 0;
