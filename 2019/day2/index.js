@@ -1,5 +1,5 @@
 const fs = require('fs');
-const inputMapped = fs.readFileSync('input.txt').toString().trim().split(',').map(Number);
+const inputMapped = fs.readFileSync('input.txt').toString().trim().split(',').map(n => +n);
 const resetInputMapped = [...inputMapped];
 
 inputMapped[1] = 12;
