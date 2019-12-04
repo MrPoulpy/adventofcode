@@ -5,10 +5,7 @@ const [wire1, wire2] = fs.readFileSync('input.txt').toString().trim().split('\n'
 const move = {'X': {'U': 0, 'D': 0, 'L': -1, 'R': 1}, 'Y': {'U': 1, 'D': -1, 'L': 0, 'R': 0}};
 
 const mapWire = (wire) => {
-    let map = {};
-    let len = 0;
-    let x = 0;
-    let y = 0;
+    let map = {}, len = 0, x = 0, y = 0;
 
     wire.forEach(path => {
        for (let i = 0 ; i < path.steps ; i++) {
