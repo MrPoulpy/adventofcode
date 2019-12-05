@@ -1,8 +1,8 @@
 const fs = require('fs');
 const inputMapped = fs.readFileSync('input.txt').toString().trim().split(',').map(n => +n);
 
-const convert = (list, mode = '0', address) => {
-   return mode === '0' ? list[address] : address;
+const convert = (arr, mode = '0', pos) => {
+   return mode === '0' ? arr[pos] : pos;
 };
 
 const parse = raw => {
