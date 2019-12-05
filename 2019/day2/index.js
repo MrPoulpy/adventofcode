@@ -5,7 +5,7 @@ const resetInputMapped = [...inputMapped];
 inputMapped[1] = 12;
 inputMapped[2] = 2;
 
-function parse(input) {
+const parse = (input) => {
     let position = 0;
 
     while (input[position] !== 99) {
@@ -21,7 +21,7 @@ function parse(input) {
         position += 4;
     }
     return input[0];
-}
+};
 
 const part1 = parse(inputMapped);
 console.log(part1);
