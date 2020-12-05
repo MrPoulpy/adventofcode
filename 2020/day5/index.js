@@ -20,7 +20,7 @@ const part1 = () => {
 
 const part2 = () => {
   let ids = input.map(s => [calcSeat(s.row, 128), calcSeat(s.col, 8)]).map(a => a[0] * 8 + a[1])
-    .filter(v => v > 7 && v < (127 * 8)); //remove first and last rows
+    .filter(v => v > 7); //remove first row
 
   return ids.find(v => !ids.includes(v+1) && v < part1()) + 1;
 
