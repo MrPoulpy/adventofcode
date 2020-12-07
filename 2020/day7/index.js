@@ -2,13 +2,13 @@ const fs = require('fs');
 const input = fs.readFileSync('input.txt').toString().trim().split('\n');
 
 const recursiveSearch = (array, search, res= []) => {
-  array.forEach(l => {
+  for (const l of array) {
     const [color, content] = l.split('contain');
     const [tryColor,] = color.split(' bags');
     if (content.includes(search)) {
       res = recursiveSearch(array, tryColor, [...new Set([...res, tryColor])]);
     }
-  });
+  }
   return res;
 };
 
@@ -21,11 +21,11 @@ const recursiveReverseSearch = (array, search, count = 0) => {
     const [color, content] = l.split('contain');
     const [tryColor,] = color.split(' bags');
     if (search === tryColor && !content.includes("no other")) {
-      content.split(',').forEach(bag => {
+      for (const bag of content.split(',')) {
         const nb = parseInt(bag); // will return only the numeric part
         const bagColor = bag.substring(bag.indexOf(nb) + 2, bag.indexOf(" bag"));
         count += nb + (nb * recursiveReverseSearch(array, bagColor));
-      });
+      }
     }
   });
   return count;
