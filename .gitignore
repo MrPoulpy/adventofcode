@@ -3,3 +3,4 @@ node_modules
 .idea
 2020/example/*
 2020/example
+.env
