@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const fetch = require('node-fetch');
 
-const year = process.argv[3] ?? "2022";
+const year = process.argv[3] ?? "2023";
 const day = process.argv[2];
 
 let dir = `./${year}`;
